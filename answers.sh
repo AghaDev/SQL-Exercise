@@ -18,5 +18,25 @@ VALUES
 
 7)UPDATE students SET Points = 150 WHERE name = "Alex"
 
-8)
+part 2:
+
+CREATE TABLE "graduates" (
+	"ID"	INTEGER NOT NULL,
+	"Name"	TEXT NOT NULL UNIQUE,
+	"Age"	INTEGER,
+	"Gender"	TEXT,
+	"Points"	INTEGER,
+	"Graduation"	TEXT,
+	PRIMARY KEY("ID" AUTOINCREMENT)
+)
+
+
+INSERT INTO graduates(name,Age,Gender,Points)
+ SELECT name,Age,Gender,Points FROM students
+ WHERE students.Name="Layal";
+
+
+DELETE FROM students
+WHERE students.name = "Layal"
+
 

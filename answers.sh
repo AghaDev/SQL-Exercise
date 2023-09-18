@@ -39,4 +39,19 @@ INSERT INTO graduates(name,Age,Gender,Points)
 DELETE FROM students
 WHERE students.name = "Layal"
 
+Joins: 
 
+
+CREATE TABLE compEmp 
+as SELECT employees.name,employees.Company,companies.Date
+FROM employees INNER JOIN companies
+on employees.Company = companies.name;
+
+
+SELECT name
+FROM compEmp
+WHERE date<2000
+
+SELECT Company
+FROM employees
+WHERE Role="Graphic Designer"
